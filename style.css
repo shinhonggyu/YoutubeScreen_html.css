@@ -76,7 +76,7 @@ header .icons .fa-search {
 
 /* Video info */
 
-body > .info {
+body > .info . {
   padding: var(--padding);
 }
 
@@ -98,15 +98,23 @@ body > .info {
 
 .info .metadata .titleAndButton .title {
   font-size: var(--font-medium);
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .title.clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  margin-right: var(--padding);
 }
 
 .info .metadata .titleAndButton .moreBtn {
   height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .titleAndButton .moreBtn.clicked {
+  transform: rotate(180deg);
 }
 
 .info .metadata .views {
@@ -139,6 +147,8 @@ body > .info {
   color: var(--blue-color);
 }
 
+/* chanel description */
+
 .info .chanel {
   display: flex;
   justify-content: space-between;
@@ -149,17 +159,19 @@ body > .info {
 .info .chanel .metadata {
   display: flex;
   align-items: center;
-}
-
-.info .chanel .metadata .info {
-  display: flex;
-  flex-direction: column;
+  padding: 16px 0;
 }
 
 .info .chanel .metadata img {
   width: var(--avatar-size);
   height: var(--avatar-size);
   border-radius: 50%;
+  margin-right: var(--padding);
+}
+
+.info .chanel .metadata .info {
+  display: flex;
+  flex-direction: column;
 }
 
 .info .chanel .metadata .info .name {
@@ -183,7 +195,7 @@ body > .info {
 }
 
 .upNext > .title {
-  font-size: medium;
+  font-size: var(--font-medium);
   color: var(--grey-dark-color);
   margin-bottom: calc(var(--padding) / 2);
 }
