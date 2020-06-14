@@ -76,7 +76,7 @@ header .icons .fa-search {
 
 /* Video info */
 
-.info {
+body > .info {
   padding: var(--padding);
 }
 
@@ -116,63 +116,111 @@ header .icons .fa-search {
 
 /* Vedio info Actions */
 
-.actions {
+.info .actions {
   display: flex;
   justify-content: space-around;
   margin: var(--padding) 0;
 }
 
-.actions button {
+.info .actions button {
   display: flex;
   flex-direction: column;
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
 
-.actions button i {
+.info .actions button i {
   margin: 0 auto;
   margin-bottom: calc(var(--padding) / 2);
   font-size: 16px;
 }
 
-.actions button i.active {
+.info .actions button i.active {
   color: var(--blue-color);
 }
 
-.chanel {
+.info .chanel {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--grey-light-color);
   border-bottom: 1px solid var(--grey-light-color);
 }
 
-.chanel .metadata {
+.info .chanel .metadata {
   display: flex;
   align-items: center;
 }
 
-.chanel .metadata .info {
+.info .chanel .metadata .info {
   display: flex;
   flex-direction: column;
 }
 
-.chanel .metadata img {
+.info .chanel .metadata img {
   width: var(--avatar-size);
   height: var(--avatar-size);
   border-radius: 50%;
 }
 
-.chanel .metadata .info .name {
+.info .chanel .metadata .info .name {
   font-size: var(--font-medium);
 }
 
-.chanel .metadata .info .subscribers {
+.info .chanel .metadata .info .subscribers {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
 
-.chanel .subscribe {
+.info .chanel .subscribe {
   text-transform: uppercase;
   color: var(--red-color);
   font-size: var(--font-medium);
+}
+
+/* Up next */
+.upNext {
+  padding: 0 var(--padding);
+}
+
+.upNext > .title {
+  font-size: medium;
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.upNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.upNext .item .img img {
+  width: 100%;
+}
+
+.upNext .item .info {
+  flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+  flex: 1 1 5%;
+}
+
+.upNext .item .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .item .info .title {
+  font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
 }
